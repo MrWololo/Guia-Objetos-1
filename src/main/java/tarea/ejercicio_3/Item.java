@@ -5,7 +5,7 @@ package tarea.ejercicio_3;
  */
 public class Item {
 
-    String identificador;
+    int identificador;
     String descripcion;
     int cantidad;
     double precioU;
@@ -13,14 +13,14 @@ public class Item {
     public Item() {
     }
 
-    public Item(String identificador, String descripcion, int cantidad, double precioU) {
+    public Item(int identificador, String descripcion, int cantidad, double precioU) {
         this.identificador = identificador;
         this.descripcion = descripcion;
         this.cantidad = cantidad;
         this.precioU = precioU;
     }
 
-    public String getIdentificador() {
+    public int getIdentificador() {
         return this.identificador;
     }
 

@@ -8,6 +8,8 @@ import tarea.ejercicio_2.Empleado;
 import tarea.ejercicio_2.execEx2;
 import tarea.ejercicio_3.Item;
 import tarea.ejercicio_3.execEx3;
+import tarea.ejercicio_4.CuentaBancaria;
+import tarea.ejercicio_4.execEx4;
 
 /**
  * Hello world!
@@ -25,6 +27,8 @@ public final class App {
         Empleado a = new Empleado();
 
         Item i = new Item();
+
+        CuentaBancaria cBancaria = new CuentaBancaria();
 
         while (repeat == 's') {
             VisualMenu.principal();
@@ -87,8 +91,31 @@ public final class App {
                             break;
 
                     }
+                    break;
                 case 4:
-                    
+                    VisualMenu.ej4();
+                    punto = scan.nextInt();
+                    switch (punto) {
+                        case 1:
+                            System.out.println("Inicializando ejemplo");
+
+                            cBancaria = execEx4.a();
+
+                            System.out.println(cBancaria);
+                            break;
+                        case 2:
+                            cBancaria = execEx4.b(cBancaria, 2500);
+                            break;
+                        case 3:
+                            cBancaria = execEx4.cYd(cBancaria, 1500);
+                            break;
+                        case 4:
+                            cBancaria = execEx4.cYd(cBancaria, 30000);
+                            break;
+                        case 5:
+                            System.out.println(execEx4.e(cBancaria));
+                            break;
+                    }
                     break;
             }
         }

@@ -19,4 +19,8 @@ public class VisualMenu {
         System.out.println("\n\t1. A)\t\t2. B)");
     }
 
+    public static void ej4() {
+        System.out.println("\n\t1. 1)\t\t2. 2)\n\t3. 3)\t\t4. 4)\n\t5. 5)");
+    }
+
 }
