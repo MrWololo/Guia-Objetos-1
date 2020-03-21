@@ -6,6 +6,8 @@ import tarea.ejercicio_1.Rectangulo;
 import tarea.ejercicio_1.execEx1;
 import tarea.ejercicio_2.Empleado;
 import tarea.ejercicio_2.execEx2;
+import tarea.ejercicio_3.Item;
+import tarea.ejercicio_3.execEx3;
 
 /**
  * Hello world!
@@ -21,6 +23,8 @@ public final class App {
 
         Empleado c = new Empleado();
         Empleado a = new Empleado();
+
+        Item i = new Item();
 
         while (repeat == 's') {
             VisualMenu.principal();
@@ -69,6 +73,23 @@ public final class App {
                             execEx2.d(c);
                             break;
                     }
+                    break;
+
+                case 3:
+                    VisualMenu.ej3();
+                    punto = scan.nextInt();
+                    switch (punto) {
+                        case 1:
+                            i = execEx3.a();
+                            break;
+                        case 2:
+                            execEx3.b(i);
+                            break;
+
+                    }
+                case 4:
+                    
+                    break;
             }
         }
 
