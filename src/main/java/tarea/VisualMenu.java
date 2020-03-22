@@ -23,4 +23,8 @@ public class VisualMenu {
         System.out.println("\n\t1. 1)\t\t2. 2)\n\t3. 3)\t\t4. 4)\n\t5. 5)");
     }
 
+    public static void ej5() {
+        System.out.println("\n\t4. -\t\t6. +\n\n\t\t0. Exit");
+    }
+
 }

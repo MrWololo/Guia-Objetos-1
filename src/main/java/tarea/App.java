@@ -10,6 +10,7 @@ import tarea.ejercicio_3.Item;
 import tarea.ejercicio_3.execEx3;
 import tarea.ejercicio_4.CuentaBancaria;
 import tarea.ejercicio_4.execEx4;
+import tarea.ejercicio_5.Reloj;
 
 /**
  * Hello world!
@@ -30,10 +31,13 @@ public final class App {
 
         CuentaBancaria cBancaria = new CuentaBancaria();
 
+        Reloj reloj = new Reloj(13, 1, 00);
+
         while (repeat == 's') {
+
             VisualMenu.principal();
             final int ejercicio = scan.nextInt();
-            final int punto;
+            int punto;
             switch (ejercicio) {
                 case 1:
                     VisualMenu.ej1();
@@ -117,8 +121,27 @@ public final class App {
                             break;
                     }
                     break;
+                case 5:
+                    char stop = 'n';
+                    while (stop != 's') {
+                        System.out.println(reloj.toString());
+                        VisualMenu.ej5();
+                        punto = scan.nextInt();
+                        switch (punto) {
+                            case 4:
+                                Reloj.secMenos(reloj);
+                                break;
+                            case 6:
+                                Reloj.secMas(reloj);
+                                break;
+                            case 0:
+                                stop = 's';
+                                break;
+                        }
+                    }
+                    break;
             }
         }
-
+        scan.close();
     }
 }
