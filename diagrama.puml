@@ -162,25 +162,4 @@ package Guia_1 {
     App *--> Reloj : reloj
     execEx1 *--> Scanner : scan
 
-
-    'Literate Code Map macros
-
-    !function method($name, $params="")
-    .. def <u><b>$name</b></u>($params) ..
-    !endfunction
-
-    !function xref($dest, $kind="dest")
-    !if ($kind == "source")
-    <color:Red><u>$dest</u></color>
-    !else
-    <color:Red>$dest</color>
-    !endif
-    !endfunction
-
-    !$code = "<color:royalBlue><size:14>"
-    !$codeb = "<color:DarkSlateGray><size:12>"
-    !$codeg = "<color:Gray><size:12>"
-    !$codeb = "<color:royalBlue>"
-    !$codep = "<color:Purple><size:14>"
-
     @enduml
