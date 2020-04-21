@@ -1,18 +1,15 @@
 package tarea.ejercicio_3;
 
-/**
- * Item
- */
 public class Item {
 
-    int identificador;
-    String descripcion;
-    int cantidad;
-    double precioU;
-
+    private int identificador;
+    private String descripcion;
+    private int cantidad;
+    private double precioU;
+    
     public Item() {
     }
-
+    
     public Item(int identificador, String descripcion, int cantidad, double precioU) {
         this.identificador = identificador;
         this.descripcion = descripcion;

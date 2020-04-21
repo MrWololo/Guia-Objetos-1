@@ -26,7 +26,8 @@ public class execEx1 {
     }
 
     public static void c(Rectangulo r) {
-        System.out.println("Area: " + r.calcArea(r.ancho, r.alto) + " Perimetro: " + r.calcPerim(r.ancho, r.alto));
+        System.out.println("Area: " + r.calcArea(r.getAncho(), r.getAlto()) + " Perimetro: "
+                + r.calcPerim(r.getAncho(), r.getAlto()));
     }
 
     public static Rectangulo d(Rectangulo r) {
@@ -34,16 +35,16 @@ public class execEx1 {
         System.out.println("Valores del rectangulo: " + r.toString());
 
         System.out.print("Ingrese los nuevos valores\nAncho: ");
-        r.ancho = scan.nextDouble();
+        r.setAncho(scan.nextDouble());
 
         System.out.print("\nAlto: ");
-        r.alto = scan.nextDouble();
+        r.setAlto(scan.nextDouble());
 
         return r;
     }
 
     public static void e(Rectangulo r) {
-        
+
         System.out.println(r.toString());
     }
 

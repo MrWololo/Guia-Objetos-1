@@ -1,8 +1,5 @@
 package tarea.ejercicio_5;
 
-/**
- * Reloj
- */
 public class Reloj {
 
     private int _horas;
@@ -98,7 +95,7 @@ public class Reloj {
         StringBuffer buffer = new StringBuffer();
 
         class Local {
-            void agregarCeros(int valor) {
+            private void agregarCeros(int valor) {
 
                 if (valor < 10 && valor >= 0) {
                     buffer.append("0");

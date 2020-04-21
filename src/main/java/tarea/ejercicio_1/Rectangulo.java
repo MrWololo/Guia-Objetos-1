@@ -5,8 +5,8 @@ package tarea.ejercicio_1;
  */
 public class Rectangulo {
 
-    double ancho = 1.0;
-    double alto = 1.0;
+    private double ancho = 1.0;
+    private double alto = 1.0;
 
     public Rectangulo() {
     }
@@ -32,17 +32,17 @@ public class Rectangulo {
         this.alto = alto;
     }
 
-    @Override
-    public String toString() {
-        return " Ancho: " + getAncho() + ", Alto: " + getAlto();
-    }
-
     public double calcArea(double ancho, double alto) {
         return ancho * alto;
     }
 
     public double calcPerim(double ancho, double alto) {
         return 2 * (alto + ancho);
+    }
+
+    @Override
+    public String toString() {
+        return " Ancho: " + getAncho() + ", Alto: " + getAlto();
     }
 
 }

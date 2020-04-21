@@ -1,0 +1,186 @@
+@startuml diagrama
+skinparam WrapWidth 300
+
+package Guia_1 {
+    class App {
+        +scan : Scanner
+        repeat : char
+        r : Rectangulo
+        c : Empleado
+        a : Empleado
+        i : Item
+        cBancaria : CuentaBancaria
+        reloj : Reloj
+        ejercicio : int
+        punto : int
+        stop : char
+        +main()
+    }
+    class VisualMenu {
+        +principal()
+        +ej1()
+        +ej2()
+        +ej3()
+        +ej4()
+        +ej5()
+    }
+
+    package ejercicio_1 {
+        class Rectangulo {
+            -ancho : double = 1.0
+            -alto : double = 1.0
+            +<<constructor>> Rectangulo()
+            +<<constructor>> Rectangulo(ancho : double, alto : double)
+            +getAncho() : double
+            +setAncho(ancho : double)
+            +getAlto() : double
+            +setAlto(alto : double)
+            +calcArea(ancho : double, alto : double) : double
+            +calcPerim(ancho : double, alto : double) : double
+            +toString() : String
+        }
+        class execEx1 {
+            +scan : Scanner
+            ancho : double
+            alto : double
+                +a() : Rectangulo
+                +b(r : Rectangulo)
+                +c(r : Rectangulo)
+                +d(r : Rectangulo) : Rectangulo
+                +e(r : Rectangulo)
+                +f()
+            }
+        }
+
+        package ejercicio_2 {
+            class Empleado {
+                -dni : double
+                -nombre : String
+                -apellido : String
+                -salario : double
+                +<<constructor>> Empleado()
+                +<<constructor>> Empleado(dni : double, nombre : String, apellido : String, salario : double)
+                +getDni() : double
+                +setDni(dni : double)
+                +getNombre() : String
+                +setNombre(nombre : String)
+                +getApellido() : String
+                +setApellido(apellido : String)
+                +getSalario() : double
+                +setSalario(salario : double)
+                +calcAnual() : double
+                +aumentarSalario(porcentaje : double)
+                +toString() : String
+            }
+            class execEx2 {
+                + scan : Scanner
+                + a() : Empleado
+                + b() : Empleado
+                + c(a : Empleado, b : Empleado)
+                + d(e : Empleado)
+            }
+
+            tarea.ejercicio_2.execEx2 ..> java.util.Scanner : scan
+        }
+
+        package ejercicio_3 {
+            class Item {
+                -identificador : int
+                -descripcion : String
+                -cantidad : int
+                -precioU : double
+                +<<constructor>> Item()
+                +<<constructor>> Item(identificador : int, descripcion : String, cantidad : int, precioU : double)
+                +getIdentificador() : int
+                +getDescripcion() : String
+                +getCantidad() : int
+                +getPrecioU() : double
+                +getPrecioTotal() : double
+                +toString() : String
+            }
+            class execEx3 {
+                +a() : Item
+                +b(ejItem : Item)
+            }
+        }
+
+        package ejercicio_4 {
+            class CuentaBancaria {
+                -identificador : int
+                -nombre : String
+                -balance : double
+                +<<constructor>> CuentaBancaria()
+                +<<constructor>> CuentaBancaria(identificador : int, nombre : String, balance : double)
+                +getIdentificador() : int
+                +getNombre() : String
+                +getBalance() : double
+                +credito(deposito : double) : double
+                +debito(sustraccion : double) : double
+                +toString() : String
+            }
+            class execEx4 {
+                +a() : CuentaBancaria
+                +b(cuenta : cuentaBancaria, deposito : double) : cuentaBancaria
+                +cYd(cuenta : cuentaBancaria, debito : double) : cuentaBancaria
+                +e(cuenta : cuentaBancaria) : String
+            }
+        }
+
+        package ejercicio_5 {
+            class Reloj {
+                -_horas : int
+                -_minutos : int
+                -_segundos : int
+                +<<constructor>> Reloj()
+                +<<constructor>> Reloj(_horas : int, _minutos : int, _segundos : int)
+                +getHoras() : int
+                +setHoras(horas : int)
+                +getMinutos() : int
+                +setMinutos(minutos : int)
+                +getSegundos() : int
+                +setSegundo(segundos : int)
+                +secMas(reloj : Reloj)
+                +secMenos(reloj : Reloj)
+                +toString() : String
+            }
+
+            tarea.ejercicio_5.Reloj ..> StringBuffer : buffer
+            tarea.ejercicio_5.Reloj ..> Local : funcion
+
+            class Local {
+                -agregarCeros(valor : int)
+            }
+        }
+    }
+
+    App *--> Scanner : scan
+    App *--> Rectangulo : r
+    App *--> Empleado : c
+    App *--> Empleado : a
+    App *--> Item : i
+    App *--> CuentaBancaria : cBancaria
+    App *--> Reloj : reloj
+    execEx1 *--> Scanner : scan
+
+
+    'Literate Code Map macros
+
+    !function method($name, $params="")
+    .. def <u><b>$name</b></u>($params) ..
+    !endfunction
+
+    !function xref($dest, $kind="dest")
+    !if ($kind == "source")
+    <color:Red><u>$dest</u></color>
+    !else
+    <color:Red>$dest</color>
+    !endif
+    !endfunction
+
+    !$code = "<color:royalBlue><size:14>"
+    !$codeb = "<color:DarkSlateGray><size:12>"
+    !$codeg = "<color:Gray><size:12>"
+    !$codeb = "<color:royalBlue>"
+    !$codep = "<color:Purple><size:14>"
+
+    @enduml

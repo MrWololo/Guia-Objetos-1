@@ -5,10 +5,10 @@ package tarea.ejercicio_2;
  */
 public class Empleado {
 
-    double dni;
-    String nombre;
-    String apellido;
-    double salario;
+    private double dni;
+    private String nombre;
+    private String apellido;
+    private double salario;
 
     public Empleado() {
     }
@@ -52,18 +52,18 @@ public class Empleado {
         this.salario = salario;
     }
 
-    @Override
-    public String toString() {
-        return "Empleado[DNI: " + getDni() + ", Nombre: " + getNombre() + ", Apellido: " + getApellido() + ", Salario: "
-                + getSalario() + "]";
-    }
-
     public double calcAnual() {
         return 12 * this.salario;
     }
 
     public void aumentarSalario(double porcentaje) {
         this.salario += ((porcentaje * this.salario) / 100);
+    }
+
+    @Override
+    public String toString() {
+        return "Empleado[DNI: " + getDni() + ", Nombre: " + getNombre() + ", Apellido: " + getApellido() + ", Salario: "
+                + getSalario() + "]";
     }
 
 }

@@ -2,9 +2,6 @@ package tarea.ejercicio_2;
 
 import java.util.Scanner;
 
-/**
- * execEx2
- */
 public class execEx2 {
 
     public static Scanner scan = new Scanner(System.in);

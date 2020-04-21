@@ -5,9 +5,9 @@ package tarea.ejercicio_4;
  */
 public class CuentaBancaria {
 
-    int identificador;
-    String nombre;
-    double balance;
+    private int identificador;
+    private String nombre;
+    private double balance;
 
     public CuentaBancaria() {
     }
