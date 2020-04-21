@@ -1,4 +1,4 @@
-@startuml diagrama
+@startuml
 skinparam WrapWidth 300
 
 package Guia_1 {
